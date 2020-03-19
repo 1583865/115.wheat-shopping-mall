@@ -1,0 +1,34 @@
+.gouwulist{
+    width: 95%;
+    border: none;
+}
+.gouwulist th{
+    background: url(img/sort1.gif);
+    height: 29px;
+    line-height: 29px;
+
+}
+
+.gouwulist td{
+    text-align: center;
+}
+.redfont{
+    color: red;
+    font-weight: bold;
+
+}
+.gouwudiv{
+    text-align: center;
+    line-height: 26px;
+}
+
+.title{
+    height: 24px;
+    background: url("img/nbg.gif");
+    border-top: 1px solid #FFFFFF;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.txtcenter{
+    text-align: center;
+}

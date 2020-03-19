@@ -1,0 +1,23 @@
+/*商品购买列表*/
+.tbprolist{
+    width: 100%;
+    text-align: center;
+}
+.tbprolist th{
+    background: #eee;
+    line-height: 26px;
+
+}
+.red{
+    color: red;
+}
+.page a{
+    margin: 0px 10px;
+}
+
+.form1{
+    margin: 50px auto;
+}
+.form1 tr td{
+    margin: 50px auto;
+}

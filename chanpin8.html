@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品列表</title>
+<link rel="stylesheet" href="css文件.css" />
+    <script type="text/javascript" src="脚本.js"></script>
+    <script type="text/javascript" src="jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <link rel="stylesheet" href="chanpin2.css">
+    <link rel="stylesheet" href="chanpin8.css">
+    <script type="text/javascript">
+        $(".gouwulist .price").each(function (index,element) {
+            var price=$(this).text();
+            alert(price);
+
+        })
+    </script>
+
+
+</head>
+
+<body>
+<html id="containtet">
+<!--网站头部-->
+<div id="pagetop">
+<div class="logo"><img src="img/logo.gif" /></div>
+<div class="topinfo">
+<span>您好，欢迎进入麦子商城！要购物？<a href="#">请登录</a> 新用户？<a href="#">请注册</a></span>
+</div>
+<div class="topnav" style="position:absolute; top:0px; left:750px; clear:both;">
+<div class="topnavlist">
+<ul>
+<li><a href="#">帮助中心</a>|</li>
+<li><a href="#">客户反馈</a>|</li>
+<li><a href="#">网站地图</a>|</li>
+<li><a href="#">加入收藏</a>|</li>
+<li style="width:300px;"><span id="Clock"></span></li>
+</ul>
+</div>
+
+<div>
+<marquee direction="up" height="25px scrollamount="2" style="text-indent:40px;"><a href="#">最新公告：6月28日戴尔电脑特惠了</a></marquee>
+
+</div>
+</div>
+    <!--主导航-->
+    <div id="nav" style="clear: both; ">
+        <div style="background: url(img/top_1.gif); height: 36px">
+
+
+        <ul id="navlist">
+            <li><a href="#">网站首页|</a> </li>
+            <li><a href="#">购物帮助|</a></li>
+            <li><a href="#">新闻资讯|</a> </li>
+            <li><a href="#">报价单|</a> </li>
+            <li><a href="#">发货单</a> </li>
+
+        </ul>
+        </div>
+        <div class="sousuo">
+            <span style="color: #FFF; font-size: 14px;">商品搜索</span><span><select><option>所有分类</option><option>最新商品</option><option>热卖商品</option></select></span>
+        <span><input type="text"; maxlength="100" size="50" /><input type="button" value="搜索商品"/></span>
+        <span><a href="#" style="color: #fff;">高级搜索</a> </span>
+            <div style="background: url(img/d3.jpg); width: 305px; height: 24px; float: right; line-height: 24px;">
+                <span style="position: absolute; right: 190px;"><a href="#">购物车暂时不为空</a> </span>
+                <span style="position: absolute; right: 90px;"><a href="#">去结算</a> </span>
+                <span style="position: absolute; right: 10px;"><a href="#">用户中心</a> </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--网站中间主题-->
+<body id="pagebody">
+<!--左边-->
+<div id="bleft">
+    <div  id="userbox" class="userbox">
+        <h3>用户信息</h3>
+        <ul>
+            <li style="background: url(img/user/1.gif) no-repeat center left;"><a href="#">欢迎tiger[退出]</a> </li>
+            <li style="background: url(img/user/8.gif) no-repeat center left;"><a href="#">用户资料修改</a> </li>
+            <li style="background: url(img/user/10.gif) no-repeat center left;"><a href="#">用户密码修改</a> </li>
+            <li style="background: url(img/user/4.gif) no-repeat center left;"><a href="#">订单管理</a> </li>
+            <li style="background: url(img/user/6.gif) no-repeat center left;"><a href="#">管理优惠券(0)</a> </li>
+            <li style="background: url(img/user/5.gif) no-repeat center left;"><a href="#">缺货登记(0)</a> </li>
+            <li style="background: url(img/user/7.gif) no-repeat center left;"><a href="#">购物车(4)</a> </li>
+            <li style="background: url(img/user/2.gif) no-repeat center left;"><a href="#">我的收藏(0)</a> </li>
+            <li style="background: url(img/user/10.gif) no-repeat center left;"><a href="#">对比框(0)</a> </li>
+        </ul>
+    </div>
+<!--商品分类-->
+    
+<!--推荐品牌-->
+  
+   
+
+    <!--合作加盟-->
+   
+   
+</div>
+<!--中间 图片轮播-->
+    <div id="bmiddle" style="width: 780px; min-height: 400px;">
+        <!--上-->
+        <div style="background: url(img/nbg.gif); min-height: 30px;">
+            <span>您的位置：
+            <span><a href="index.html">首页</a> </span>》
+            <span><a href="index.html">购物车</a> </span>
+        </div>
+        <div>
+            <table class="gouwulist">
+                <tr>
+                    <th class="title">商品名称</th>
+                    <th class="title">单价（元）</th>
+                    <th class="title">数量</th>
+                    <th class="title">合计（元）</th>
+                    <th class="title">类型</th>
+                    <th class="title">操作</th>
+
+                </tr>
+
+
+                <tr>
+                    <td>戴尔电脑</td>
+                    <td>￥<span class="price">4000</span></td>
+                    <td><input type="text" value="99" size="3" name="num"/></td>
+                    <td>￥<span class="smalltotal">00</span></td>
+                    <td>戴尔</td>
+                    <td class="txtcenter"><input type="button" value="更改数量"/>&nbsp;&nbsp;<input type="button" value="取消订购"/></td>
+                </tr>
+
+                <tr>
+                    <td>戴尔电脑</td>
+                    <td>￥<span class="price">4000</span></td>
+                    <td><input type="text" value="99" size="3" name="num"/></td>
+                    <td>￥<span class="smalltotal">00</span></td>
+                    <td>戴尔</td>
+                    <td class="txtcenter"><input type="button" value="更改数量"/>&nbsp;&nbsp;<input type="button" value="取消订购"/></td>
+                </tr>
+
+                <tr>
+                    <td>戴尔电脑</td>
+                    <td>￥<span class="price">4000</span></td>
+                    <td><input type="text" value="99" size="3" name="num"/></td>
+                    <td>￥<span class="smalltotal">00</span></td>
+                    <td>戴尔</td>
+                    <td class="txtcenter"><input type="button" value="更改数量"/>&nbsp;&nbsp;<input type="button" value="取消订购"/></td>
+                </tr>
+
+                <tr>
+                    <td>戴尔电脑</td>
+                    <td>￥<span class="price">4000</span></td>
+                    <td><input type="text" value="99" size="3" name="num"/></td>
+                    <td>￥<span class="smalltotal">00</span></td>
+                    <td>戴尔</td>
+                    <td class="txtcenter"><input type="button" value="更改数量"/>&nbsp;&nbsp;<input type="button" value="取消订购"/></td>
+                </tr>
+
+                <tr>
+                    <td>戴尔电脑</td>
+                    <td>￥<span class="price">4000</span></td>
+                    <td><input type="text" value="99" size="3" name="num"/></td>
+                    <td>￥<span class="smalltotal">00</span></td>
+                    <td>戴尔</td>
+                    <td class="txtcenter"><input type="button" value="更改数量"/>&nbsp;&nbsp;<input type="button" value="取消订购"/></td>
+                </tr>
+
+                <tr>
+                    <td>戴尔电脑</td>
+                    <td>￥<span class="price">4000</span></td>
+                    <td><input type="text" value="99" size="3" name="num"/></td>
+                    <td>￥<span class="smalltotal">00</span></td>
+                    <td>戴尔</td>
+                    <td class="txtcenter"><input type="button" value="更改数量"/>&nbsp;&nbsp;<input type="button" value="取消订购"/></td>
+                </tr>
+
+
+
+
+            </table>
+
+            <div class="gouwudiv">
+                <span>共</span>
+                <span class="redfont">2</span>
+                <span>件商品</span>
+                <span>价格总计：</span>
+                <span class="redfont">￥8000.00元</span>
+                <span>您是：</span>
+                <span>一般会员</span>
+                <span>（不享受折扣价）</span>
+            </div>
+            <div class="gouwudiv"><span>满500元可以免运费</span></div>
+            <div class="gouwudiv"><span><input type="button" value="现在结算"/>&nbsp;&nbsp;<input type="button" value="继续购物"/></span></div>
+        </div>
+
+<!--选项-->
+    </div>
+
+
+        
+
+
+
+       
+
+
+
+
+
+
+  
+    
+
+
+<!--网站底部-->
+<div id="pagefooter">
+    <!--底部导航-->
+    <div class="footnav">
+        <ul>
+            <li id="listnav">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">发展经历</a> </li>
+                    <li><a href="#">企业介绍</a> </li>
+                    <li><a href="#">联系方式</a> </li>
+                    <li><a href="#">企业文化</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>付款方式</h4>
+                <ul>
+                    <li><a href="#">银行汇款</a> </li>
+                    <li><a href="#">在线支付</a> </li>
+                    <li><a href="#">支付宝转账</a> </li>
+                    <li><a href="#">公司转账</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>送货方式</h4>
+                <ul>
+                    <li><a href="#">上门自提</a> </li>
+                    <li><a href="#">EMS快递</a> </li>
+                    <li><a href="#">快递发货</a> </li>
+                    <li><a href="#">平邮快递</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>售后服务</h4>
+                <ul>
+                    <li><a href="#">质保承诺</a> </li>
+                    <li><a href="#">退货政策</a> </li>
+                    <li><a href="#">价格保护</a> </li>
+                    <li><a href="#">返修申请</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>购物帮助</h4>
+                <ul>
+                    <li><a href="#">用户等级</a> </li>
+                    <li><a href="#">积分获得及使用</a> </li>
+                    <li><a href="#">购物流程</a> </li>
+                    <li><a href="#">常见问题</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+    <div class="footinfo">
+        <div><span>淘宝店</span><span>京东店</span><span>苏宁店</span><span>1号店</span></div>
+        <div><span>COPYRight2018.04 版权所有：张鲁航</span></div>
+        <div><span>客服电话：0530-1234567， 售后电话：0530-1234567</span></div>
+        <div><span>客服邮箱：3301760872@qq.com,技术支持：3301760872@qq.com</span></div>
+    </div>
+</div>
+
+</div>
+    </div>
+</body>
+</html>

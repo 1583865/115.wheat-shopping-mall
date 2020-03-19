@@ -1,0 +1,160 @@
+/*产品列表*/
+
+/*中*/
+.subnavlist {
+
+}
+.subnavlist span{
+    font-weight: bold;
+
+}
+.subnavlist ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.subnavlist ul li{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+
+}
+.subnavlist ul li a{
+    color: gray;
+    text-decoration: none;
+}
+
+
+/*下 选项栏*/
+/*选项卡*/
+.list{
+    border: solid 1px #ccc;
+
+}
+.tablist{
+    background: url(img/sortbg.jpg);
+}
+.tablist a{
+    border-left: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+    text-align: center;
+    line-height: 26px;
+    width: 80px;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    margin: 0px;
+
+}
+.tablist a:hover{
+    background: url(img/sortbg1.jpg);
+}
+.tablist span{
+
+}
+
+/*商品栏*/
+.prolistinfo{
+
+    clear: both;
+
+}
+.prolistimg {
+    float: left;
+    width: 80px;
+
+}
+.listinfo{
+    float: left;
+    width: 570px;
+}
+
+.listinfo div{
+    margin: 5px;
+}
+
+
+/*产品详细介绍*/
+/*z左*/
+.proimgbox{
+    width: 310px;
+    float: left;
+    min-height: 300px;
+border: solid 1px #656565;
+}
+.bigimgbox{
+
+
+}
+.smallimglist{
+
+}
+.smallimglist div{
+    width: 60px;
+    height: 60px;
+    float: left;
+    border: solid 1px #E1E1E1;
+    margin: 3px;
+}
+.smallimglist div img{
+    width: 50px;
+    height: 50px;
+}
+
+/*z右*/
+.proinfolist{
+    width: 440px;
+    float: left;
+    min-height: 300px;
+    border: 1px solid #656565;
+}
+.proinfolist div{
+    margin: 10px;
+}
+
+
+.title{
+    text-align: center;
+}
+
+
+/*产品详细说明*/
+.proinfotitle{
+
+    margin: 0px;
+    background-color: #FFF;
+    line-height: 26px;
+    vertical-align: bottom;
+    border: 1px solid #E1E1E1;
+}
+.proinfotitle div{
+    width: 80px;
+    height: 20px;
+    display: inline-block;
+    padding-top: 3px;
+    text-decoration: none;
+    padding-top: 3px;
+    text-decoration: none;
+    color: #000;
+    border: solid 1px #ccc;
+    border-bottom: none;
+
+}
+.proinfotitle div:hover{
+    background: url("img/sortbg.jpg");
+}
+.proinfotitle div a{
+    text-decoration: none;
+
+}
+#productbox{
+    border: solid 1px #ccc;
+    min-height: 300px;
+}
+#info1{
+    border: 1px solid red;
+    width: 700px;
+    height: 400px;
+
+}
+

@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品购买页面</title>
+<link rel="stylesheet" href="css文件.css" />
+    <script type="text/javascript" src="脚本.js"></script>
+    <script type="text/javascript" src="jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="图片轮播js.js"></script>
+    <link rel="stylesheet" href="chanpin2.css">
+    <link rel="stylesheet" href="chanpin4.css">
+    <!--js实现产品鼠标划过奇偶页颜色，鼠标划过颜色-->
+    <script type="text/javascript">
+    $(document).ready(function (e) {
+        var color="#eee";
+    /*改变偶数行背景*/
+    $(".tbprolist tr:odd td").css("background-color",color);
+
+    /*把背景保存到属性中*/
+    $(".tbprolist tr:odd").attr("bg",color);
+    $(".tbprolist tr:even").attr("bg","#fff");
+
+    /*鼠标移动上去显示浅蓝色*/
+    $(".tbprolist tr td").mouseover(function () {
+        $(this).parent().find("td").css("background-color","#d5f4fe");
+
+    });
+/*鼠标在表格移动时，离开的那一行背景恢复*/
+$(document).ready(function () {
+    $(".tbprolist tr td").mouseout(function () {
+        var bgc=$(this).parent().attr("bg");
+        $(this).parent().find("td").css("background-color",bgc);
+
+    });
+
+})
+});
+
+
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+<div id="containtet">
+<!--网站头部-->
+<div id="pagetop">
+<div class="logo"><img src="img/logo.gif" /></div>
+<div class="topinfo">
+<span>您好，欢迎进入麦子商城！要购物？<a href="#">请登录</a> 新用户？<a href="#">请注册</a></span>
+</div>
+<div class="topnav" style="position:absolute; top:0px; left:750px; clear:both;">
+<div class="topnavlist">
+<ul>
+<li><a href="#">帮助中心</a>|</li>
+<li><a href="#">客户反馈</a>|</li>
+<li><a href="#">网站地图</a>|</li>
+<li><a href="#">加入收藏</a>|</li>
+<li style="width:300px;"><span id="Clock"></span></li>
+</ul>
+</div>
+
+<div>
+<marquee direction="up" height="25px scrollamount="2" style="text-indent:40px;"><a href="#">最新公告：6月28日戴尔电脑特惠了</a></marquee>
+
+</div>
+</div>
+    <!--主导航-->
+    <div id="nav" style="clear: both; ">
+        <div style="background: url(img/top_1.gif); height: 36px">
+
+
+        <ul id="navlist">
+            <li><a href="#">网站首页|</a> </li>
+            <li><a href="#">购物帮助|</a></li>
+            <li><a href="#">新闻资讯|</a> </li>
+            <li><a href="#">报价单|</a> </li>
+            <li><a href="#">发货单</a> </li>
+
+        </ul>
+        </div>
+        <div class="sousuo">
+            <span style="color: #FFF; font-size: 14px;">商品搜索</span><span><select><option>所有分类</option><option>品牌电脑
+        </option><option>最新商品</option><option>热卖商品</option></select></span>
+        <span><input type="text"; maxlength="100" size="50" /><input type="button" value="搜索商品"/></span>
+        <span><a href="#" style="color: #fff;">高级搜索</a> </span>
+            <div style="background: url(img/d3.jpg); width: 305px; height: 24px; float: right; line-height: 24px;">
+                <span style="position: absolute; right: 190px;"><a href="#">购物车暂时不为空</a> </span>
+                <span style="position: absolute; right: 90px;"><a href="#">去结算</a> </span>
+                <span style="position: absolute; right: 10px;"><a href="#">用户中心</a> </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--网站中间主题-->
+    <!--商品购买列表-->
+<div id="pagebody" style="min-height: 500px;">
+<div style="text-align: right; line-height: 26px; ">
+    <span>打印报价单</span>
+</div>
+
+    <div>
+        <h4>品牌电脑</h4>
+        <div>
+            <table style="width: 100%" class="tbprolist">
+                <tr>
+                <th>图片</th> <th>商品</th> <th>零售价</th>
+                <th>本站价格</th> <th>库存</th> <th>购买</th>
+                </tr>
+
+                <tr style="text-align: center">
+                    <td><img src="img/imgs/p2.jpg" width="50px" height="50px"> </td>
+                    <td>戴尔电脑</td>
+                    <td>6000</td>
+                    <td class="red">5000</td>
+                    <td>800</td>
+                    <td><a href="chanpin3.html " >定购</a></td>
+
+                </tr>
+
+                <tr style="text-align: center">
+                    <td><img src="img/imgs/p4.jpg" width="50px" height="50px"> </td>
+                    <td>联想电脑</td>
+                    <td>8000</td>
+                    <td class="red">7000</td>
+                    <td>600</td>
+                    <td><a href="chanpin3.html " >定购</a></td>
+
+                </tr>
+
+                <tr style="text-align: center">
+                    <td><img src="img/imgs/p2.jpg" width="50px" height="50px"> </td>
+                    <td>戴尔电脑</td>
+                    <td>6000</td>
+                    <td class="red">5000</td>
+                    <td>800</td>
+                    <td><a href="chanpin3.html " >定购</a></td>
+
+                </tr>
+
+                <tr style="text-align: center">
+                    <td><img src="img/imgs/p4.jpg" width="50px" height="50px"> </td>
+                    <td>联想电脑</td>
+                    <td>8000</td>
+                    <td class="red">7000</td>
+                    <td>600</td>
+                    <td><a href="chanpin3.html " >定购</a></td>
+
+                </tr>
+
+
+                <tr style="text-align: center">
+                    <td><img src="img/imgs/p2.jpg" width="50px" height="50px"> </td>
+                    <td>戴尔电脑</td>
+                    <td>6000</td>
+                    <td class="red">5000</td>
+                    <td>800</td>
+                    <td><a href="chanpin3.html " >定购</a></td>
+
+                </tr>
+
+                <tr style="text-align: center">
+                    <td><img src="img/imgs/p4.jpg" width="50px" height="50px"> </td>
+                    <td>联想电脑</td>
+                    <td>8000</td>
+                    <td class="red">7000</td>
+                    <td>600</td>
+                    <td><a href="chanpin3.html " >定购</a></td>
+
+                </tr>
+
+                <tr style="text-align: center">
+                    <td><img src="img/imgs/p2.jpg" width="50px" height="50px"> </td>
+                    <td>戴尔电脑</td>
+                    <td>6000</td>
+                    <td class="red">5000</td>
+                    <td>800</td>
+                    <td><a href="chanpin3.html " >定购</a></td>
+
+                </tr>
+
+                <tr style="text-align: center">
+                    <td><img src="img/imgs/p4.jpg" width="50px" height="50px"> </td>
+                    <td>联想电脑</td>
+                    <td>8000</td>
+                    <td class="red">7000</td>
+                    <td>600</td>
+                    <td><a href="chanpin3.html " >定购</a></td>
+
+                </tr>
+            </table>
+            <div class="page">
+                <a href="#">第一页/共一页</a>
+                <a href="#">上一页</a>
+                <a href="#">下一页</a>
+                <span>页面跳转</span><input type="text" size="2"/>页
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!--网站底部-->
+<div id="pagefooter">
+    <!--底部导航-->
+    <div class="footnav">
+        <ul>
+            <li id="listnav">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">发展经历</a> </li>
+                    <li><a href="#">企业介绍</a> </li>
+                    <li><a href="#">联系方式</a> </li>
+                    <li><a href="#">企业文化</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>付款方式</h4>
+                <ul>
+                    <li><a href="#">银行汇款</a> </li>
+                    <li><a href="#">在线支付</a> </li>
+                    <li><a href="#">支付宝转账</a> </li>
+                    <li><a href="#">公司转账</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>送货方式</h4>
+                <ul>
+                    <li><a href="#">上门自提</a> </li>
+                    <li><a href="#">EMS快递</a> </li>
+                    <li><a href="#">快递发货</a> </li>
+                    <li><a href="#">平邮快递</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>售后服务</h4>
+                <ul>
+                    <li><a href="#">质保承诺</a> </li>
+                    <li><a href="#">退货政策</a> </li>
+                    <li><a href="#">价格保护</a> </li>
+                    <li><a href="#">返修申请</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>购物帮助</h4>
+                <ul>
+                    <li><a href="#">用户等级</a> </li>
+                    <li><a href="#">积分获得及使用</a> </li>
+                    <li><a href="#">购物流程</a> </li>
+                    <li><a href="#">常见问题</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+    <div class="footinfo">
+        <div><span>淘宝店</span><span>京东店</span><span>苏宁店</span><span>1号店</span></div>
+        <div><span>COPYRight2018.04 版权所有：张鲁航</span></div>
+        <div><span>客服电话：0530-1234567， 售后电话：0530-1234567</span></div>
+        <div><span>客服邮箱：3301760872@qq.com,技术支持：3301760872@qq.com</span></div>
+    </div>
+</div>
+
+</div>
+    </div>
+</div>
+</div>
+</body>
+</html>

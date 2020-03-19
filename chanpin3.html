@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品详细说明</title>
+<link rel="stylesheet" href="css文件.css" />
+    <script type="text/javascript" src="脚本.js"></script>
+    <script type="text/javascript" src="jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="图片轮播js.js"></script>
+    <link rel="stylesheet" href="chanpin2.css">
+
+
+<script type="text/javascript">
+    //鼠标悬停显示图片
+    function changeimgs() {
+        var bigimg = document.getElementById("bigimg");
+        bigimg.src = event.srcElement.src;
+    }
+        //显示指定id标签的
+        function displaybj(id) {
+            var obj=document.getElementById(id);
+            obj.style.display="block";
+
+        }
+        //影藏指定id标签
+        function hiddenbj(id) {
+            var obj=document.getElementById(id);
+            obj.style.display="none";
+
+        }
+        //初始化放大镜图片
+        function MiniDiv() {
+        var bj1=document.getElementById("targetimg");
+        var bj2=document.getElementById(event.srcElement.id);
+        bj1.src=bj2.src;
+
+
+        }
+        //放大镜效果
+        function MMove() {
+        displaybj("bigimgboxdiv");
+        MiniDiv();
+        //获取放大镜对象
+            var bj=document.getElementById("targetimg");
+            //获取鼠标相对位移
+            var offx=bj.width/event.srcElement.width;
+            var offy=bj.height/event.srcElement.height;
+
+            //获取放大镜容器对象
+
+            var div=document.getElementById("bigimgboxdiv");
+
+
+            //设置容器的滚动条
+            div.scrollLeft=(event.offsetX*offx)
+            div.scrollTop=(event.offsetY*offy)
+
+
+        }
+
+
+</script>
+
+</head>
+
+<body>
+<html id="containtet">
+<!--网站头部-->
+<div id="pagetop">
+<div class="logo"><img src="img/logo.gif" /></div>
+<div class="topinfo">
+<span>您好，欢迎进入麦子商城！要购物？<a href="#">请登录</a> 新用户？<a href="#">请注册</a></span>
+</div>
+<div class="topnav" style="position:absolute; top:0px; left:750px; clear:both;">
+<div class="topnavlist">
+<ul>
+<li><a href="#">帮助中心</a>|</li>
+<li><a href="#">客户反馈</a>|</li>
+<li><a href="#">网站地图</a>|</li>
+<li><a href="#">加入收藏</a>|</li>
+<li style="width:300px;"><span id="Clock"></span></li>
+</ul>
+</div>
+
+<div>
+<marquee direction="up" height="25px scrollamount="2" style="text-indent:40px;"><a href="#">最新公告：6月28日戴尔电脑特惠了</a></marquee>
+
+</div>
+</div>
+    <!--主导航-->
+    <div id="nav" style="clear: both; ">
+        <div style="background: url(img/top_1.gif); height: 36px">
+
+
+        <ul id="navlist">
+            <li><a href="#">网站首页|</a> </li>
+            <li><a href="#">购物帮助|</a></li>
+            <li><a href="#">新闻资讯|</a> </li>
+            <li><a href="#">报价单|</a> </li>
+            <li><a href="#">发货单</a> </li>
+
+        </ul>
+        </div>
+        <div class="sousuo">
+            <span style="color: #FFF; font-size: 14px;">商品搜索</span><span><select><option>所有分类</option><option>最新商品</option><option>热卖商品</option></select></span>
+        <span><input type="text"; maxlength="100" size="50" /><input type="button" value="搜索商品"/></span>
+        <span><a href="#" style="color: #fff;">高级搜索</a> </span>
+            <div style="background: url(img/d3.jpg); width: 305px; height: 24px; float: right; line-height: 24px;">
+                <span style="position: absolute; right: 190px;"><a href="#">购物车暂时不为空</a> </span>
+                <span style="position: absolute; right: 90px;"><a href="#">去结算</a> </span>
+                <span style="position: absolute; right: 10px;"><a href="#">用户中心</a> </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--网站中间主题-->
+<body id="pagebody">
+<!--左边-->
+<div id="bleft">
+    <div  id="userbox" class="userbox">
+        <h3>用户信息</h3>
+        <ul>
+            <li style="background: url(img/user/1.gif) no-repeat center left;"><a href="#">注册/登录</a> </li>
+            <li style="background: url(img/user/8.gif) no-repeat center left;"><a href="#">购物车(0)</a> </li>
+            <li style="background: url(img/user/10.gif) no-repeat center left;"><a href="#">对比框(0)</a> </li>
+        </ul>
+    </div>
+<!--商品分类-->
+    <div  id="productbox" class="productbox">
+
+
+            <div class="hezuobox">
+                <h4>最近浏览商品</h4>
+                <div class="kefubox" style="border:solid 1px red; border-bottom: dotted 1px #ccc; border-top: none;">
+                    <div style="width: 50px; float: left; line-height: 100px;"><img src="img/imgs/p2.jpg" height="50" width="50"> </div>
+                    <div style="width: 120px; float: left; line-height: 20px; margin-left: 10px;">戴尔电脑，价格优惠，品质保证</div>
+                    <div class="price">￥4500.00</div>
+                </div>
+
+                    <div class="kefubox" style="border:solid 1px red;border-bottom: dotted 1px #ccc; border-top: none;">
+                        <div style="width: 50px; float: left; line-height: 100px;"><img src="img/imgs/p2.jpg" height="50" width="50"> </div>
+                        <div style="width: 120px; float: left; line-height: 20px; margin-left: 10px;">戴尔电脑，价格优惠，品质保证</div>
+                        <div class="price">￥4500.00</div>
+                    </div>
+
+                        <div class="kefubox" style="border:solid 1px red;border-bottom: dotted 1px #ccc; border-top: none;">
+                            <div style="width: 50px; float: left; line-height: 100px;"><img src="img/imgs/p2.jpg" height="50" width="50"> </div>
+                            <div style="width: 120px; float: left; line-height: 20px; margin-left: 10px;">戴尔电脑，价格优惠，品质保证</div>
+                            <div class="price">￥4500.00</div>
+                        </div>
+
+                            <div class="kefubox" style="border:solid 1px red;border-bottom: dotted 1px #ccc; border-top: none;">
+                                <div style="width: 50px; float: left; line-height: 100px;"><img src="img/imgs/p2.jpg" height="50" width="50"> </div>
+                                <div style="width: 120px; float: left; line-height: 20px; margin-left: 10px;">戴尔电脑，价格优惠，品质保证</div>
+                                <div class="price">￥4500.00</div>
+                            </div>
+
+                <div class="kefubox" style="border:solid 1px red;border-bottom: dotted 1px #ccc; border-top: none;">
+                    <div style="width: 50px; float: left; line-height: 100px;"><img src="img/imgs/p2.jpg" height="50" width="50"> </div>
+                    <div style="width: 120px; float: left; line-height: 20px; margin-left: 10px;">戴尔电脑，价格优惠，品质保证</div>
+                    <div class="price">￥4500.00</div>
+                </div>
+
+                <div class="kefubox" style="border:solid 1px red;border-bottom: dotted 1px #ccc; border-top: none;">
+                    <div style="width: 50px; float: left; line-height: 100px;"><img src="img/imgs/p2.jpg" height="50" width="50"> </div>
+                    <div style="width: 120px; float: left; line-height: 20px; margin-left: 10px;">戴尔电脑，价格优惠，品质保证</div>
+                    <div class="price">￥4500.00</div>
+                </div>
+
+                <div class="kefubox" style="border:solid 1px red;border-bottom: dotted 1px #ccc; border-top: none;">
+                    <div style="width: 50px; float: left; line-height: 100px;"><img src="img/imgs/p2.jpg" height="50" width="50"> </div>
+                    <div style="width: 120px; float: left; line-height: 20px; margin-left: 10px;">戴尔电脑，价格优惠，品质保证</div>
+                    <div class="price">￥4500.00</div>
+                </div>
+
+                <div class="kefubox" style="border:solid 1px red;border-bottom: dotted 1px #ccc; border-top: none;">
+                    <div style="width: 50px; float: left; line-height: 100px;"><img src="img/imgs/p2.jpg" height="50" width="50"> </div>
+                    <div style="width: 120px; float: left; line-height: 20px; margin-left: 10px;">戴尔电脑，价格优惠，品质保证</div>
+                    <div class="price">￥4500.00</div>
+                </div>
+
+                <div class="kefubox" style="border:solid 1px red; border-top: none;">
+                    <div style="width: 50px; float: left; line-height: 100px;"><img src="img/imgs/p2.jpg" height="50" width="50"> </div>
+                    <div style="width: 120px; float: left; line-height: 20px; margin-left: 10px;">戴尔电脑，价格优惠，品质保证</div>
+                    <div class="price">￥4500.00</div>
+                </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+<!--推荐品牌-->
+  
+   
+
+    <!--合作加盟-->
+   
+
+</div>
+<!--中间 图片轮播-->
+    <div id="bmiddle" style="width: 780px; min-height: 400px;">
+        <!--上-->
+        <div style="background: url(img/nbg.gif); min-height: 30px; text-indent: 10px; margin-top: 10px;">
+            <img src="img/home.gif">
+            <span>您的位置：
+            <span><a href="index.html">首页</a> </span>》
+            <span><a href="index.html">家用电器</a> </span>
+        </div>
+        <!--产品详细-->
+        <!--上-->
+        <div style="width: 760px; min-height: 400px; text-indent: 10px; margin-top: 10px;  clear: both">
+            <!--z左-->
+            <div class="proimgbox">
+                <div class="bigimgbox">
+                    <img src="img/imgs/p2.jpg"onmouseout="hiddenbj('bigimgboxdiv')" onmousemove="MMove();" width="200px" height="200px" id="bigimg">
+                </div>
+                <div class="smallimglist">
+                    <div><img src="img/imgs/p2.jpg" id="p1" onmouseover="changeimgs();MiniDiv();" > </div>
+                    <div><img src="img/imgs/p1.jpg" id="p2" onmouseover="changeimgs();MiniDiv();" > </div>
+                    <div><img src="img/imgs/p3.jpg"  id="p3" onmouseover="changeimgs();MiniDiv();" > </div>
+                    <div><img src="img/imgs/p4.jpg" id="p4" onmouseover="changeimgs();MiniDiv();" > </div>
+                </div>
+
+            </div>
+
+            <!--右-->
+            <div class="proinfolist" style="position: relative;" >
+                <div class="title"><span style="font-size: 18px; font-weight: bold; color: #003;">三星打印机-4100（<a href="#">0篇用户评论</a>|<a href="#">写评论</a> ）</span></div>
+                <div><span>商品编号：011000</span></div>
+                <div><span>商品积分：100(<a href="#">积分可兑换优惠券</a>) </span></div>
+                <div><span>市场价格：￥1000</span></div>
+                <div><span style="font-weight: bold; color: red;">本站价格：￥800</span></div>
+                <div><span style="font-weight: bold; color: red;">为您节省：￥200</span></div>
+                <div><span>订购数量</span><span><input type="text"/></span></div>
+                <div><a href="#"><img src="img/buy.gif"> </a>
+                <a href="#"><img src="img/shoucang.gif"> </a>
+                    <a href="#"><img src="img/duibi.gif"> </a>
+                </div>
+
+                <!--放大镜效果-->
+                <div id="bigimgboxdiv" style=" display:none; position: absolute;top:20px; left: 10px; border: solid 1px #ccc; width: 300px; height: 300px;
+                  overflow: hidden; z-index: 1000;">
+                    <img  id="targetimg" src="img/imgs/p2.jpg" width="600" height="600"> </div>
+            </div>
+
+            <!--广告-->
+
+            <div style="height: 40px; line-height: 40px; border-top: solid 1px #ccc; padding-top: 5px; border-bottom: solid 1px #ccc;">
+                <a href="#">下一个商品   三星打印机</a>
+                <span style="margin-left: 100px; margin-right: 1px; margin-top: 5px; margin-bottom: 10px;">
+                <a href="#"><img src="img/pay/alipay_buy.gif"> </a>
+            </span>
+                <span style="margin-top: 10px;">
+                <a href="#"><img src="img/pay/paypal_buy.gif"> </a>
+            </span>
+
+            </div>
+
+        </div>
+
+
+        <!--产品详细说明-->
+        <div class="proinfotitle">
+            <div><a href="#">详细说明</a></div>
+            <div><a href="#">相关产品</a></div>
+            <div><a href="#">商品评论</a></div>
+            <div><a href="#">付款方式</a></div>
+            <div><a href="#">送货方式</a></div>
+        </div>
+        <div id="info1" class="proinfobox">
+            个性计算机
+
+            电动车贷款流程的旅程看得出来跨店满减弗兰克和面积法律纠纷
+
+            电动车贷款流程的旅程看得出来跨店满减弗兰克和面积法律纠纷
+            电脑上
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--中-->
+
+        <!--下-->
+        
+            </div>
+
+
+
+
+
+
+       
+
+
+
+
+
+</div>
+    </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<!--分类推荐商品-->
+    <!--分类推荐商品-->
+    
+
+
+<!--网站底部-->
+<div id="pagefooter">
+    <!--底部导航-->
+    <div class="footnav">
+        <ul>
+            <li id="listnav">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">发展经历</a> </li>
+                    <li><a href="#">企业介绍</a> </li>
+                    <li><a href="#">联系方式</a> </li>
+                    <li><a href="#">企业文化</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>付款方式</h4>
+                <ul>
+                    <li><a href="#">银行汇款</a> </li>
+                    <li><a href="#">在线支付</a> </li>
+                    <li><a href="#">支付宝转账</a> </li>
+                    <li><a href="#">公司转账</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>送货方式</h4>
+                <ul>
+                    <li><a href="#">上门自提</a> </li>
+                    <li><a href="#">EMS快递</a> </li>
+                    <li><a href="#">快递发货</a> </li>
+                    <li><a href="#">平邮快递</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>售后服务</h4>
+                <ul>
+                    <li><a href="#">质保承诺</a> </li>
+                    <li><a href="#">退货政策</a> </li>
+                    <li><a href="#">价格保护</a> </li>
+                    <li><a href="#">返修申请</a> </li>
+                </ul>
+            </li>
+
+            <li id="listnav">
+                <h4>购物帮助</h4>
+                <ul>
+                    <li><a href="#">用户等级</a> </li>
+                    <li><a href="#">积分获得及使用</a> </li>
+                    <li><a href="#">购物流程</a> </li>
+                    <li><a href="#">常见问题</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+    <div class="footinfo">
+        <div><span>淘宝店</span><span>京东店</span><span>苏宁店</span><span>1号店</span></div>
+        <div><span>COPYRight2018.04 版权所有：张鲁航</span></div>
+        <div><span>客服电话：0530-1234567， 售后电话：0530-1234567</span></div>
+        <div><span>客服邮箱：3301760872@qq.com,技术支持：3301760872@qq.com</span></div>
+    </div>
+</div>
+
+</div>
+    </div>
+</body>
+</html>
